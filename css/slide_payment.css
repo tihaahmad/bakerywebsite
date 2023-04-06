@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+
+
+/*  +++++++++++++++++++++++++++++++++++++++++++++++   VARIABLES   +++++++++++++++++++++++++++++++++++++++++++++++ */
+:root {
+  --black: #000000;
+  --black2: #333333;
+  --red: #d9534f;
+  --red2: #F08080;
+  
+  /*  WHITE CATEGORIES  */
+  --white: #ffffff;
+  --white2: #f1f1f1;
+  --white3: #f9f9f9;
+  
+  /*  GRAY CATEGORIES   */
+  --bggray: #F5F5F5;
+  --bggray2: #E0E0E0;
+  --headgray: #E8E8E8;
+  --middlegray: #D8D8D8;
+  --lightgray: #ebecf0;
+  --shinygray: #C5C5C5;
+  --gray: #949494;
+  --darkgray: #808080;
+  
+  /*  BLUE CATEGORIES */
+  --primary: #1976D2;
+  --lightblue: #5B9AD9;
+  --shinyblue: #10DED8;
+  --whiteblue: #5B9AD9;
+  --middleblue: #7190C6;
+  --darkblue: #223A52;
+  --blue: #13599E;
+  --greenblue: #B8C2D4;
+  
+  /*  FONTS   */
+  --arial: Arial, FontAwesome;
+  --mainfont: justicia;
+  --mainfont2: rockabilly;
+  --sans-serif: TIMESS__;
+
+  /* SUCCESS & ERROR  */
+  --green: #A3E0A2;
+  --redgreen: #D4978E;
+  --error: #d9534f;
+  
+}
+
+
+.no_payment {
+  display: block;
+  font-size: 1.35rem;
+  margin: 8% auto;
+  padding: 8rem 2rem;
+  text-align: center;
+  font-family: arial, sans-serif;
+  letter-spacing: .5px;
+  color: var(--error);
+  font-style: italic;
+}
+
+.no_payment span {
+  color: var(--blue);
+  margin: 0 1%;
+  font-style: normal;
+}
+
+.fa-face-frown {
+  margin-right: 1%;
+}
+
+
+.nunito,
+.tab-show__inner__button-container--button__label,
+.container .content--article__h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.no-select,
+.tab-show__inner__button-container--button__label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.tab-show {
+  width: 900px;
+  height: 18.75;
+  margin: 0.75rem auto 1.5rem;
+  right: 85%;               /* CHANGE */
+  position: relative;
+}
+.tab-show__inner {
+  width: 900px;
+  position: relative;
+}
+.tab-show__inner--button-container {
+  display: block;
+}
+.tab-show__inner--hidden-checkbox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -10000px;
+}
+.tab-show__inner--hidden-checkbox:checked {
+  transform: scale(1.1);
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.tab-show__inner--hidden-checkbox:checked + .tab-show__inner--image-container {
+  display: block;
+}
+/*.tab-show__inner--hidden-checkbox:checked + .tab-show__inner--image-container .tab-show__inner--image-container__image-floor {
+  -webkit-animation: slide-over 1.125s forwards ease-out;
+          animation: slide-over 1.125s forwards ease-out;
+}*/
+.tab-show__inner--image-container {
+  position: relative;
+  z-index: 1;
+  display: none;
+  margin-top: 3%;
+  width: 900px;
+  box-shadow: 0px 12px 25px 5px #1976d235;
+}
+
+.tab-show__inner--image-container img {
+  width: 900px;
+}
+
+.tab-show__inner--image-container__image-floor {
+  position: absolute;
+  left: 0;
+  top: 99.25%;
+  bottom: -3%;
+  right: 100%;
+  height: 7px;
+  transition: 11s ease-in;
+  background-color: #da8754;
+}
+.tab-show__inner .tab-show__inner--image-container .tab-show__inner--image-container__image-floor {
+  background-color: #334895;
+}
+
+.tab-show__inner__button-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: space-between;
+  background: #444;
+  position: relative;
+  transform: translateY(0.5rem);
+  z-index: 2;
+}
+.tab-show__inner__button-container--button {
+  flex-basis: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
+.tab-show__inner__button-container--button {
+  /*background: var(--whiteblue);*/
+  background-color: white;
+  border: 1px solid var(--blue);
+}
+
+.tab-show__inner__button-container--button__label {
+  font-size: 1.2rem;
+  display: block;
+  cursor: pointer;
+  padding: 0.6rem;
+  background-color: inherit;
+  color: var(--blue);
+  letter-spacing: .5px;
+  transform-origin: center center;
+  transition: all 0.3s ease-out;
+}
+.tab-show__inner__button-container--button__label:hover {
+  transform: scale(1.075);
+  border-radius: 0 0 0.3rem 0.3rem;
+  background-color: var(--whiteblue);
+  color: white;
+}
+html,
+html * {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  margin: 10% auto;
+}
+.container .content {
+  height: 100%;
+  padding: 1rem;
+  margin-top: 20%;
+}
+
+/*@-webkit-keyframes slide-over {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes slide-over {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+*/
+
+@media only screen and (max-width: 868px) {
+  .tab-show {
+    width: 700px;
+    height: auto !important;
+    right: 57%;
+  }
+
+  .tab-show__inner {
+    width: 700px;
+    position: relative;
+    margin: 0 auto 20% !important;'
+    box-shadow: none !important;
+  }
+
+  .tab-show__inner__button-container--button__label {
+    font-size: 1.1rem;
+  }
+
+  .tab-show__inner--image-container {
+    width: 700px;
+    box-shadow: none !important;
+  }
+
+}
+
+
+@media (min-width: 581px) and (max-width: 700px) {
+  .tab-show {
+    width: 550px;
+    height: auto !important;
+    right: 34%;
+  }
+
+  .tab-show__inner {
+    width: 550px;
+    position: relative;
+    margin: 0 auto 20% !important;
+    box-shadow: none !important;
+  }
+
+  .tab-show__inner__button-container--button__label {
+    font-size: 0.9rem;
+  }
+
+  .tab-show__inner--image-container {
+    width: 550px;
+    box-shadow: none !important;
+  }
+
+  .tab-show__inner__button-container--button__label i {
+    display: block;
+    margin-bottom: 4% !important;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .tab-show {
+    width: 380px;
+    height: auto !important;
+    right: 34%;
+  }
+
+  .tab-show__inner {
+    width: 380px;
+    position: relative;
+    margin: 0 auto 20% !important;
+    box-shadow: none !important;
+  }
+
+  .tab-show__inner__button-container--button__label {
+    font-size: 0.9rem;
+  }
+
+  .tab-show__inner--image-container {
+    width: 380px;
+    margin-top: 7% !important;
+    box-shadow: none !important;
+  }
+
+  .tab-show__inner__button-container--button__label i {
+    display: block;
+    margin-bottom: 4% !important;
+  }
+}
